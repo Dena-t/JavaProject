@@ -9,7 +9,7 @@ public static void main(String[] args) {
     int odds;
     int number;
     int counter;
-    int reminder;
+    int remainder;
     Scanner console;
     
 
@@ -18,15 +18,15 @@ public static void main(String[] args) {
     odds =0;
     number =0;
     counter =0;
-    reminder =0;
+    remainder =0;
     console = new Scanner(System.in);
 
     
     
      System.out.println("Please enter a number:");
      number = console.nextInt();
-     reminder = number % 2 ;
-    switch (reminder){
+     remainder = number % 2 ;
+    switch (remainder){
         case 0:
         System.out.println("number is even");
         evens ++;
