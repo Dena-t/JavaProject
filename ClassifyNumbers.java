@@ -6,55 +6,54 @@ public static void main(String[] args) {
     int zeros;
     int evens;
     int odds;
-    int number;
-    int counter;
     int remainder;
-    int i;
+    int counter;
+    int size;
     Scanner console;
     
-
+    size = 0;
     zeros = 0;
     evens = 0;
     odds =0;
-    number =0;
     counter =0;
     remainder =0;
     console = new Scanner(System.in);
- 
- 
-   System.out.println("Please enter 20 integers , positive,negaruve or zeros"); 
 
-   for(i=0;i<=19;i++){
+    System.out.println(" How many integers you want to analyze?");
+    size = console.nextInt(); 
 
-/*Uncomment if you want to ask user to enter the count of numbers manually */
-  // System.out.println("How many integers you want to enter?");
-   // counter = console.nextInt();
-    //for (i=1;i<=counter;i++){
-        System.out.println("Enter number "+ i + "`s value");
-        number = console.nextInt();
-        remainder = number % 2 ;
- 
-    switch (remainder){
+   int[] arr = new int[size];
+   System.out.println(" Please enter "+ size+" integers , positive, negative or zeros:");
+
+   for(counter=0;counter<size; counter++){
+    arr[counter] = console.nextInt();
+    remainder = arr[counter] % 2 ;
+     switch (remainder){
         case 0:
-        System.out.println("number you entered is even");
+       // System.out.print(" Number you entered is even");
         evens ++;
-           if (number == 0){
-             System.out.println("Number is 0");
+           if (arr[counter] == 0){
+            // System.out.println(" and it is 0");
              zeros++;
                } 
         break;
         case 1: case -1:
-        System.out.println("number you entered is odd");
+       // System.out.println();
+       // System.out.println(" Number you entered is odd");
         odds ++;
         break;
 
         }
-    console.close();
-}
 
-        System.out.printf("%s %d %s %d %s %n","there are",evens,"evens which also includes ",zeros,"zeros" );
+   }
+
+
+    
+
          System.out.println();
-         System.out.println("Total number of odds is "+ odds);
+         System.out.printf("%s %d %s %d %s %n","There are : ",evens," evens which also includes: ",zeros," zero(s)" );
+         System.out.println();
+         System.out.println("Total number of odds is: "+ odds);
        
  
   
@@ -62,7 +61,6 @@ public static void main(String[] args) {
 
 
 }
-//}
 
 
 
