@@ -1,59 +1,64 @@
-package Project;
-    
+package Project_3_MovieTicketSaleDonation;
+
 import java.util.Scanner;
+
 
 public class MovieTicketSale {
 
     public static void main(String[] args) {
 
-        String movieName;
-        double adultTicketPrice;
-        double childTicketPrice;
-        int noOfAdultTicketSold;
-        int noOfChildTicketSold;
-        double percentDonated;
-        double amountDonated;
-        double grossAmount;
+        
+
+        double adultTicketPrice = 0;
+        double childTicketPrice = 0;
+        double grossAmount = 0;
+        double amountDonated = 0;
+        double percentageDonation = 0;
         double netSaleAmount;
-        Scanner console;
-        int numberOfTicketSold;
 
+        int noAdultTicketSold = 0;
+        int noChildTicketSold = 0;
 
-       console = new Scanner(System.in);
+        String  Moviename;
 
-        System.out.println("Please enter the following needed info: ");
-        System.out.print("Movie Name: ");
-        movieName = console.nextLine();
+       
+        Scanner console = new Scanner(System.in);
+       
 
+        grossAmount = 0 ;
 
-        System.out.print("Adult Ticket Price: ");
+        System.out.print(" Enter the movie name :" );
+        Moviename = console.nextLine();
+
+        System.out.print("Enter the price of the adult ticket :");
         adultTicketPrice = console.nextDouble();
 
-        System.out.print("Child Ticket Price: ");
+        System.out.print("Enter the price of the child ticket : ");
         childTicketPrice = console.nextDouble();
 
-        System.out.print("Number of Adult Ticket sold: ");
-        noOfAdultTicketSold = console.nextInt();
+        System.out.print("Enter the number of the adult ticket sold : ");
+        noAdultTicketSold = console.nextInt();
 
-        System.out.print("Number of child Ticket sold: ");
-        noOfChildTicketSold = console.nextInt();
+        System.out.print("Enter the number of the child ticket sold :");
+        noChildTicketSold = console.nextInt();
 
-        System.out.print("Percentage of the gross amount to be donated to the charity: ");
-        percentDonated = console.nextDouble();
+        System.out.print("Enter the percentage of the donation : ");
+        percentageDonation = console.nextDouble();
+
+        grossAmount = adultTicketPrice*noAdultTicketSold + childTicketPrice*noChildTicketSold ;
+
+        amountDonated = grossAmount * percentageDonation ;
+
+        netSaleAmount = grossAmount - amountDonated ;
+
+        System.out.printf("The gross amount sold is : $%.2f %n", grossAmount);
+        System.out.printf("The amount donated is : $% .2f %n", amountDonated);
+        System.out.printf("The netSaleAmount is : %.2f ", netSaleAmount);
+
+
         console.close();
-
-        grossAmount = adultTicketPrice * noOfAdultTicketSold + childTicketPrice*noOfChildTicketSold;
-        amountDonated = grossAmount * percentDonated / 100;
-        netSaleAmount = grossAmount - amountDonated;
-        numberOfTicketSold = noOfAdultTicketSold + noOfChildTicketSold;
-        System.out.println("========================================");
-        System.out.printf("%s %s %n%s %d %n%s $%.2f %n%s %.2f%% %n%s $%.2f %n%s %.2f %n" 
-        ,"Movie Name:", movieName, "Number of Ticket Sold:",
-        numberOfTicketSold,"Gross Amount :",grossAmount,
-        "Percentage of the Gross Amount Donated:", percentDonated ,"Amount Donated:",amountDonated
-        , "Net Sale:", netSaleAmount);
-        System.out.println("========================================");
-
-
+        
     }
+    
+    
 }
