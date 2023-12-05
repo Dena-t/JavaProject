@@ -10,6 +10,7 @@ public class NumberCount {
         int inputNo;
         int OddNumber;
         int EvenNumber;
+        int Zero;
 
         Scanner data;
 
@@ -18,13 +19,18 @@ public class NumberCount {
         
         EvenNumber=0;
         OddNumber=0;
-
+        Zero=0;
         
         for(TotalNo=1; TotalNo<=20; TotalNo++){
         //input 20 times of numbers, each number could be different    
          //ask user to entre number
         System.out.println("Please entre your number");
         inputNo=data.nextInt();
+
+        if (inputNo==0) {   
+           System.out.println("This number is 0");
+            Zero++;
+        }else{
        
             
         //use switch to declair the input number is odd or even    
@@ -46,16 +52,18 @@ public class NumberCount {
                     System.out.println("The input is void, please entre other number");
                     TotalNo++;
                     break;
-            }
+                }
+            }   
 
-        }data.close();
+        }data.close();  
         //result print out
         System.out.println("The total odd number is " +OddNumber);
         System.out.println("The total even number is "+EvenNumber);
+        System.out.println("The total zero is "+Zero);
         
         
         
-        
+      
     }
-    
+ 
 }
