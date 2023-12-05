@@ -1,0 +1,113 @@
+FSD 11 Programming 1
+Israel Uzcategui
+Final Project
+
+Project 1 ClassifyNumbers
+
+ 
+ 
+The program reads 20 integers, but you can easily modify it to read any set of numbers. In fact, 
+you can modify the program so that it first prompts the user to specify how many integers are to 
+be read. 
+ 
+Input: A 20 integers—positive, negative, or zeros.  
+Output: The number of zeros, even numbers, and odd numbers.
+
+Step by step algorithm
+
+
+This program reads a given set of integers and then prints the number of odd integers, the 
+number of even integers, and the number of zeros.
+
+This program can read 20 integers or any set of numbers
+
+Do you want it to read the preset 20 numbers? Y/N
+
+    
+if no then ask:
+    
+
+    How many numbers do you want it to classify?
+    prompt to enter number
+
+    do you want these numbers to be randomly generated? Y/N
+    
+        if Yes then generate the entered quantity of random numbers
+
+        if no then prompt to enter the numbers manually separated by a space
+
+
+if yes then read  0 -2 -3 -5 6 7 8 0 3 0 -23 -8 0 2 9 0 12 67 54 
+
+    Store value in the variable
+    Check if number is = 0
+        if number = 0 increment 0 count
+    Check if number is even or odd
+        Divide number by 2
+            Check reminder
+                if reminder = 0 then number is even
+                    if number is even, increment even count
+                if reminder is = 1 then number is odd
+                    if number is odd, increment odd count
+    
+
+Variables
+    integer numbers
+
+        integer zeros
+        integer evens
+        integer odds
+    
+(integer counts)
+
+        integer zeros count
+        integer evens count
+        integer odds count
+
+test numbers
+
+
+        declaration:
+
+        prompt
+        
+
+
+
+         boolean ifrandom = true; {
+            System.out.println(" Do you want the numbers to be randomly generated? Y\\N ");
+            decision = console.nextLine();
+        
+
+        switch(decision)
+        {
+            case "y":
+                ifrandom = true;
+                break;
+            case "n":
+                ifrandom = false;
+                break;
+
+        }
+
+        if (!ifrandom) {
+
+            for (counter = 0; counter < 19; counter++) {
+                remainder = fixnums[counter] % 2;
+                switch (remainder){
+                    case 0:
+                    evencount ++;
+                        if (fixnums[counter] == 0){
+                        
+                    zerocount ++;
+                    }
+                    break;
+               
+                case 1: case -1:
+                oddcount++;
+                break;
+                }
+                }
+            }
+            
+        } // end boolean2
