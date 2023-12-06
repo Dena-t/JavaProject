@@ -15,7 +15,6 @@ public class ClassifyNumbersv3{
 
 // start scanner object
 static Scanner console = new Scanner(System.in);
-// start BufferedReader
 
 
     // start main method

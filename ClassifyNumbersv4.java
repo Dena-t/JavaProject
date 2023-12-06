@@ -1,8 +1,8 @@
 package finalProgram1;
 
 /** ClassifyNumbers.Java
- *  @version V1.01
- *  @author Israel Uzcategui
+ *  @version V4.01
+ *  @author Dena Torabi, Israel Uzcategui 
  *  @since 2023-12-04
  */ 
 // import utilities
